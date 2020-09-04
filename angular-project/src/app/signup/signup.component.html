@@ -1,0 +1,76 @@
+<div class="container-fluid">
+    <div class="row justify-content-center mt-1 align-item-center " 
+    style="height:500px; ">
+        
+                <div class="  col-5 col-md-3 d-flex bg-dark justify-content-center align-items-center text-light flex-column" 
+                style="margin-top: 100px; border-radius:20px;
+                
+                font-size: 30px;
+                font-weight:bold;
+                background-color: rgba(51, 83, 226, 0.589) !important;">
+                  <div>Welcome</div>  Register Here !
+                    <img src="https://img.icons8.com/color/58/000000/user.png"/>
+                </div>
+
+                <div class=" col-5 col-md-3 bg-light d-flex flex-column justify-content-center" [formGroup]="fbFormGroup" style="margin-top: 100px; border-radius:20px;">
+                
+                
+                <div class="  input-group mb-4 input-group-sm">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                          <img src="https://img.icons8.com/color/20/000000/gender-neutral-user.png"/></span>
+                    </div>
+                    <input type="text" class="form-control fix-rounded-right" placeholder="Username" formControlName="username" required>
+                    <div class="invalid-feedback">
+                      Please choose a username.
+                    </div>
+                  </div>
+
+                  <div class=" input-group mb-4 input-group-sm">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <img src="https://img.icons8.com/color/20/000000/address-book.png"/>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control fix-rounded-right"  placeholder="Email-Id" formControlName="emailid" required>
+                    <div class="invalid-feedback">
+                     Please choose emailId
+                    </div>
+                  </div>
+
+                  <div class="  input-group mb-4 input-group-sm">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                          <img src="https://img.icons8.com/color/20/000000/password1--v1.png"/></span>
+                    </div>
+                    <input type="password" class="form-control fix-rounded-right"  placeholder="Password" formControlName="password" required>
+                    <div class="invalid-feedback">
+                      Please choose a Password.
+                    </div>
+                  </div>
+
+                  <div class="  input-group mb-4 input-group-sm">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                          <img src="https://img.icons8.com/color/20/000000/password1--v1.png"/></span>
+                    </div>
+                    <input type="password" class="form-control fix-rounded-right"  placeholder="Confirm Password" formControlName="cpassword" required>
+                    <div class="invalid-feedback">
+                      Please choose a correct Password.
+                    </div>
+                  </div>
+                  
+                  <button type="button" class="btn btn-sm btn-primary"    (click)="signuphere()">Submit Here</button>
+                  
+{{fbFormGroup.value | json}}
+
+
+
+                </div>
+            
+            
+    </div>
+
+    
+    <router-outlet></router-outlet>
+</div>

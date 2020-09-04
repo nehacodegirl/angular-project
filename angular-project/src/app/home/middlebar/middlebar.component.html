@@ -1,0 +1,18 @@
+<p>middlebar works!</p>
+
+<div class="container-fluid">
+  <div class="row flex-column">
+    <div>Black Live Matters</div>
+        <button (click)="makePostApiCall()" class="btn btn-secondary btn-sm">
+          Ajax Call
+        </button>
+      
+    <div
+        class="border col-6 border-secondary d-flex justify-content-center align-items-center my-1"
+        style="height: 100px"
+        *ngFor="let item of list"
+      >
+        {{ item.title}}
+      </div>
+    </div>
+  </div>
